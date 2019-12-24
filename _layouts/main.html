@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+       {% include head.html %}
+       <style> 
+
+            .row{
+                box-sizing: border-box;  
+                border-radius: 10px; 
+                box-shadow:0 0 10px 0 #333; 
+                margin:1em; 
+                background: #fff;
+            }          
+           .row:hover{
+               background: rgb(191, 246, 239);
+           }
+           
+       </style>
+    </head>
+   
+    <body >
+
+        <div class="container-fluid" style="background: url({{site.baseurl}}/assests/images/img2.jpg) no-repeat; background-size: cover; position: static; width: 100%; background-attachment:fixed;">
+        {% include header.html%}       
+        <div class="container" style="align-content: center; padding:2em; box-sizing: border-box; border:0px solid black; height:100%; margin-top: 7%; position: relative; z-index: 999;">
+            {% for blog in site.posts%}
+           <a href="{{ blog.url | prepend: site.baseurl}}" style="text-decoration: none;">
+           <div class="row"  >
+            <div class="col-sm-4 text-center" style="padding:0;">
+                    <img src="{{ blog.image | prepend: site.baseurl}}"  style="width:100%; border-bottom-left-radius: 10px; border-top-left-radius: 10px; size:cover;">                
+            </div>
+            <div class="col-sm-8"  style="padding:0.5em;">
+                <h2 style="font-family: FontAwesome; color:#000; ">{{ blog.title }}</h2>
+                <p>{{ blog.content | strip_html | truncatewords: 25 }}</p>
+                {% for tags in blog.tags %}
+                    <span style="box-sizing: border-box; background:rgb(41, 103, 238); border-radius: 5px; color:#fff; padding:0.25em;"><i class="fa fa-tag" aria-hidden="true"></i>
+                        {{tags}}</span>
+                {% endfor %}&nbsp;
+                <span class="post-date" style="color:#333;"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;{{blog.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;</span>
+                <span class="post-words"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;{% capture words %}{{ blog.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
+      
+            </div>
+           </div> 
+            </a>
+           {% endfor %}
+        </div>
+        {% include footer.html %}
+    </div>
+    </body>
+    </html> 
