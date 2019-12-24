@@ -13,5 +13,5 @@ categories: about
 
 I am currently enjoying Machine Learning. I with a team developed [Mood Indigo 2019](http://moodi.org) app and website. My major interest is in field of Data Analytics but can work on devlopment too for living.
 
-I am always surrounded by positivity and happiness. I frequently crack good and poor jokes depending upon how quickly I framed it.
+[Here](https://drive.google.com/open?id=1JMHixwJ-5ULvTJGK6OhB96DvjFYXM9Jg) is my cirriculum vitae attached.
 
