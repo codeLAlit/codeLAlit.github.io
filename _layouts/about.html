@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About-{{page.name}}</title>
+        <title>About</title>
        {% include head.html %}
        <style>
            .person {
@@ -20,6 +20,7 @@
                 padding-right:1em;
                 border-radius: 20px;
                 border: 1px solid rgb(85, 29, 77);
+                
             }
 
             .container{
@@ -33,18 +34,21 @@
 
             .col-sm-6{
                 background: #fff;
-                margin-top:-1%;
                 padding-top:2em; 
                 padding-left:1em;
                 padding-right:1em;
-                border-radius: 20px;
-                z-index:-999;
+                border-radius: 20px;               
                 border: 1px solid rgb(253, 94, 232);
             }
+
+            .content a{
+                color:rgb(25, 116, 221)
+            }
+        
         </style>
     </head>
    
-<body style="background: url({{site.baseurl}}/assests/images/img2.jpg) no-repeat; background-size: cover; height:100%; width: 100%; background-attachment:fixed; font-family: FontAwesome;">
+<body style="background: url({{site.baseurl}}/assests/images/img2.jpg) no-repeat; background-size: cover; height:100%; width: 100%; background-attachment:fixed; ">
     <div class="container-fluid">
     {% include header.html%}       
     
@@ -78,15 +82,18 @@
         </div>
         <div class="col-sm-4"></div>
         </div>
-        <div class="row">
+        <div class="row" id="num2">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-                {{user.content | markdownify}}
+            <div class="content">
+               {{user.content }}
+            </div>
             </div>
             <div class="col-sm-3"></div>
         </div>
     </div> 
     {% endfor %}
+    
     {% include footer.html %}
     </div>
 
