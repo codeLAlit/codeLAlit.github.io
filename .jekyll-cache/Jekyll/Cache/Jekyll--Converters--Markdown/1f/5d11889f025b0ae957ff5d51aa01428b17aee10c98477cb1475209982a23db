@@ -1,0 +1,11 @@
+I"E<p>Supervised learning is the form of learning in which we are given labeled test inputs and outputs. Our model just need to learn the differences or learn the examples (rote learning) and then predict the test outputs. Given:</p>
+<ul>
+  <li>Set of input feature X_1, X_2 …</li>
+  <li>A target feature Y</li>
+  <li>Set of training examples where values of the inputs and corresponding outputs is given.
+Depending on predicted values it can be calssified into two catgories:</li>
+  <li>Regression if output is continous</li>
+  <li>Classification if output is discrete</li>
+</ul>
+
+:ET
