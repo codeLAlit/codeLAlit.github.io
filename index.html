@@ -1,549 +1,167 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Lalit Saini: Home</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lalit Saini — Techie Portfolio</title>
+  <meta name="description" content="Lalit Saini — Electrical Engineer, Developer & AI Enthusiast at IIT Bombay">
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="#hero" class="nav__logo">&lt;Lalit /&gt;</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="180070030New.pdf" target="_blank" class="nav__cv">CV</a>
+      </div>
+    </div>
+  </nav>
 
-	</head>
-	<body>
-	<div id="colorlib-page">
-		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<div class="text-center">
-				<div class="author-img" style="background-image: url(images/resi.png);"></div>
-				<h1 id="colorlib-logo"><a href="index.html">Lalit Saini</a></h1>
-				<span class="position">Second Year Undergraduate <br><a href="#">Electrical Engineering</a> <br><b>IIT Bombay </b></span>
-			</div>
-			<nav id="colorlib-main-menu" role="navigation" class="navbar">
-				<div id="navbar" class="collapse">
-					<ul>
-						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li><a href="#" data-nav-section="about">About</a></li>
-						<li><a href="#" data-nav-section="skills">Skills</a></li>
-						<li><a href="#" data-nav-section="education">Education</a></li>
-						<li><a href="#" data-nav-section="experience">Experience</a></li>
-						<li><a href="#" data-nav-section="work">Work</a></li>
-						<li><a href="#" data-nav-section="blog">Blog</a></li>
-						<li><a href="180070030New.pdf" target="_blank">CV</a></li>
-						<li><a href="#" data-nav-section="contact">Contact</a></li>
-					</ul>
-				</div>
-			</nav>
+  <section id="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__content">
+      <div class="hero__photo">
+        <img src="images/resi.png" alt="Lalit Saini">
+      </div>
+      <p class="hero__greeting">&gt; Hello, world! I'm</p>
+      <h1>Lalit Saini</h1>
+      <p class="hero__tagline" id="tagline"></p>
+      <p class="hero__desc">
+        Electrical Engineer &middot; AI Enthusiast &middot; Developer
+      </p>
+      <div class="hero__social">
+        <a href="https://github.com/codeLAlit/" target="_blank" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+        <a href="https://www.linkedin.com/in/lalit-saini-553b35192/" target="_blank" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://www.instagram.com/_lalitsaini" target="_blank" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      </div>
+      <div class="hero__actions">
+        <a href="180070030New.pdf" target="_blank" class="btn btn--primary">Download CV</a>
+        <a href="#contact" class="btn btn--outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
 
-			<div class="colorlib-footer">
-				
-				<ul>
-					<li><a href="https://www.facebook.com/profile.php?id=100034740338121"><i class="icon-facebook2"></i></a></li>
-					<li><a href="https://github.com/codeLAlit/"><i class="icon-github"></i></a></li>
-					<li><a href="https://www.instagram.com/_lalitsaini"><i class="icon-instagram"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/lalit-saini-553b35192/"><i class="icon-linkedin2"></i></a></li>
-				</ul>
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__number">01.</span>
+        <h2>About Me</h2>
+        <div class="section__line"></div>
+      </div>
+      <div class="about__grid">
+        <div class="about__info reveal">
+          <p><strong>Hi, I'm Lalit Saini.</strong> I am an Electrical Engineer by study but a coder by heart. I am mainly interested in Machine Learning, Deep Learning and their applications. I am also interested in automating things using Python. In the Electrical field, I would like to work in automation.</p>
+          <p>Apart from this, I am a good sportsman. I play cricket, table tennis, badminton, pool and e-games. Music is my escape and I am fond of comedy. I consider myself a budding standup comedian too. I am an MCU follower and like only Batman from the DC Universe.</p>
+        </div>
+        <div class="about__photo reveal">
+          <div class="about__photo-frame">
+            <img src="images/resi.png" alt="Lalit Saini">
+          </div>
+          <div class="about__status">
+            <span class="status-dot"></span>
+            Second Year Undergraduate &middot; Electrical Engineering &middot; IIT Bombay
+          </div>
+        </div>
+      </div>
+      <div class="about__interests">
+        <div class="interest-card reveal" style="--card-accent: var(--accent)">
+          <span class="interest-card__icon"><i class="icon-layers2"></i></span>
+          <h3>Deep Learning</h3>
+          <p>Building neural networks and exploring AI applications</p>
+        </div>
+        <div class="interest-card reveal" style="--card-accent: #7c3aed">
+          <span class="interest-card__icon"><i class="icon-data"></i></span>
+          <h3>Software</h3>
+          <p>Crafting clean, efficient solutions with code</p>
+        </div>
+        <div class="interest-card reveal" style="--card-accent: #10b981">
+          <span class="interest-card__icon"><i class="icon-phone3"></i></span>
+          <h3>Application</h3>
+          <p>Building apps that solve real-world problems</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section id="timeline" class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__number">02.</span>
+        <h2>Timeline</h2>
+        <div class="section__line"></div>
+        <p>Education &amp; Experience</p>
+      </div>
+      <div class="timeline" id="timelineContainer"></div>
+    </div>
+  </section>
 
-				<span style="font-size: xx-small; margin-top: 20%;"><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span>
-			</div>
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__number">03.</span>
+        <h2>Projects</h2>
+        <div class="section__line"></div>
+        <p>Click on a project title to view the repository</p>
+      </div>
+      <div class="grid-2" id="projectsGrid"></div>
+    </div>
+  </section>
 
-		</aside>
+  <section id="blog" class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__number">04.</span>
+        <h2>Blog</h2>
+        <div class="section__line"></div>
+      </div>
+      <div class="grid-3" id="blogGrid"></div>
+    </div>
+  </section>
 
-		<div id="colorlib-main">
-			<section class="colorlib-about" data-section="about">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm " >
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta">About</span>
-										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p><strong>Hi I'm Lalit Saini</strong> </p>
-										<p>I am Electrical Engineer by study but a coder by heart. I am mainly interested in Machine Learning, Deep Learning and their applications. I am also interested in automating stuff using python. In Electrical field I would like to work in automation.</p>
-										<p>Apart from this I am a good sportsman. I play cricket, table tennis, badminton, pool and e-games. Music is my escape and I am fond of comedy. I think myself as budding standup comedian too. I am a MCU follower and like only batman form DC Universe. </p>
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__number">05.</span>
+        <h2>Get in Touch</h2>
+        <div class="section__line"></div>
+      </div>
+      <div class="contact__content reveal">
+        <p>Have a project, idea, or just want to say hi? Drop me a message!</p>
+        <a href="mailto:lalitpsaini@gmail.com" class="contact__email">
+          <i class="icon-mail"></i> lalitpsaini@gmail.com
+        </a>
+        <div class="contact__social">
+          <a href="https://github.com/codeLAlit/" target="_blank" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+          <a href="https://www.linkedin.com/in/lalit-saini-553b35192/" target="_blank" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.instagram.com/_lalitsaini" target="_blank" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Lalit Saini &mdash; Built with OpenCode &amp; Big Pickle ❤️</p>
+    </footer>
+  </section>
 
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-									<div class="services color-1">
-										<span class="icon2"><i class="icon-layers2"></i></span>
-										<h3>Deep Learning</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
-									<div class="services color-3">
-										<span class="icon2"><i class="icon-data"></i></span>
-										<h3>Software</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
-									<div class="services color-4">
-										<span class="icon2"><i class="icon-phone3"></i></span>
-										<h3>Application</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<section class="colorlib-services" data-section="skills" id="skills">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 " >
-							<span class="heading-meta">What I do?</span>
-							<h2 class="colorlib-heading">Here are some of my skills</h2>
-						</div>
-					</div>
-					<div class="row row-pt-md">
-						<div class="col-md-4 text-center ">
-							<div class="services color-3">
-								<span class="icon">	
-									<img src="images/cpp.png" height="50" >								
-								</span>
-								<div class="desc">
-									
-									<h3>C++</h3>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center ">
-							<div class="services color-2">
-								<span class="icon">	
-									<img src="images/py.png" height="50" >								
-								</span>
-								<div class="desc">
-									
-									<h3>Python</h3>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center ">
-							<div class="services color-1">
-								<span class="icon">	
-									<img src="images/html.png" height="50" >								
-								</span>
-								<div class="desc">
-									
-									<h3>HTML & CSS</h3>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center ">
-							<div class="services color-4">
-								<span class="icon">	
-									<img src="images/tf.png" height="50" >								
-								</span>
-								<div class="desc">
-									
-									<h3>Tensorflow</h3>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center ">
-							<div class="services color-5">
-								<span class="icon">	
-									<img src="images/opencv.png" height="50" >								
-								</span>
-								<div class="desc">
-									
-									<h3>Open CV</h3>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center ">
-							<div class="services color-6">
-								<span class="icon">	
-									<img src="images/as.png" height="50" >								
-								</span>
-								<div class="desc">
-									
-									<h3>Android Studio</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="colorlib-education" data-section="education" id="education">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 ">
-							<span class="heading-meta">Education</span>
-							<h2 class="colorlib-heading">Education</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 " >
-							<div class="fancy-collapse-panel">
-								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingOne">
-									        <h4 class="panel-title">
-									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Bachelor Degree of Electrical Engineering
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-									         <div class="panel-body">
-												<p>Currently I am pursuing my Bachelor Degree from <strong>Electrical Engineering </strong>  Department in <strong>Indian Institute of Technology Bombay</strong>. Along with my major degree I am pursuing Minor Degree in 
-													<strong> Computer Science</strong>. I am managing to have descent CPI. In EE I am interested in Analog Ciruit Design and Digital Logics.
-												</p>		
-											</div>
-									    </div>
-									</div>
-						
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingThree">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Certification Course Computer Vision
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-									        <div class="panel-body">
-									            <p>In summer-20, I completed an online course on Computer Vision provided by <strong>Microsoft</strong>  on edX. The course lectures were not that good but the assignments cleared everything. You can find the certificate on my Linkedin.</p>	
-									        </div>
-									    </div>
-									</div>
-
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingFour">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Certification Course Machine Learning
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-									        <div class="panel-body">
-												<p>Like every other neewbie in the field of Machine Learning, I started my journey from the famous Machine Learning course on <strong>Coursera</strong> by Prof. Andrew Ng, in summer-19. I liked the course but due to insufficient information there, I continued my endeavour and explored 
-												a number of online posts and few books. You can see the completion certificate on my Linkedin</p>	
-									        </div>
-									    </div>
-									</div>
-
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingFive">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">High School Secondary Education
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-									        <div class="panel-body">
-									            <p>I completed my Higher Education from <strong>St. Wilfred's Sr. Sec. School, Jaipur, Rajasthan</strong> . I pursued science stream with mathematics and like every other science student, I was deeply into physics. I liked mathematics too and was pretty 
-													good at that until epsilon-delta converged my interest to a limit in college. </p>	
-									        </div>
-									    </div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="colorlib-experience" data-section="experience" id="experience">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 " data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Experience</span>
-							<h2 class="colorlib-heading ">Work Experience</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-				         <div class="timeline-centered">
-					         <article class="timeline-entry " >
-					            <div class="timeline-entry-inner">
-
-					               <div class="timeline-icon color-1">
-					                  <i class="icon-pen2"></i>
-					               </div>
-
-					               <div class="timeline-label">
-					                  <h2><a href="#">ML Intern: IDfy</a> <span>May 2020</span></h2>
-					                  <p>I did my first internship at <a href="https://www.idfy.com/"> IDfy </a> as ML <strong>Software Developer </strong> . At starting I worked on migrating an app to Python3 from Python2, the work contained much more complications than expected. 
-										  After that I worked on finding a method to detect skew in images without learning approach purely by classical techniques of Image Processing. At last I worked on signature extraction from cards. Apart from these I worked on some small problems.
-										  I can't tell how I did any of the thing because I signed a Non-Disclosure Agreement with the company.
-									  </p>
-					               </div>
-					            </div>
-					         </article>
-
-
-					         <article class="timeline-entry " >
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-2">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">Teaching Assistant: IIT Bombay</a> <span>Spring 2020</span></h2>
-					                  <p>
-										  I was Teaching Assistant for a group of 48 students for the course <strong>Electrostatics and Electrodynamics</strong> . 
-									  </p>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry " >
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-3">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">App Developer: Mood Indigo</a> <span>December 2019</span></h2>
-					                  <p>
-										  I was part of the team who developed the official app of the <strong>Mood Indigo</strong> , Asia's largest college cultural fest. I worked mainly on fest event APIs, their integration and UI in the app.
-										  The app was a great hit. 
-									  </p>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry " >
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-4">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">Web Secretary: EESA, IITB</a> <span>2019-2020</span></h2>
-					                  <p> 
-										  I worked as the Web Secretary for <strong>Electrical Engineering Students' Association, IITB</strong>. I renovated the website and took part in managing EESA events like
-										  trek, cultural nights, movie screening, orientation etc. 
-									  </p>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry" >
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-5">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">Convenor: WnCC, IITB</a> <span>2019-2020</span></h2>
-					                  <p>
-										  I worked as a convenor of <strong>Web and Coding Club, IITB</strong>. I assisted in coding events and hackathon. I helped many juniors in coding and development.
-									  </p>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry begin ">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-none">
-					               </div>
-					            </div>
-					         </article>
-					      </div>
-					   </div>
-				   </div>
-				</div>
-			</section>
-
-			<section class="colorlib-work" data-section="work" id="work">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 " >
-							<span class="heading-meta">My Work</span>
-							<h2 class="colorlib-heading">Recent Work</h2>
-							<p> Click on <b>Project title</b> to see attached repository.</p>
-						</div>
-					</div>	
-					<div class="row">
-						<div class="col-md-6 " >
-							<div class="project" style="background-image: url(images/mia.png);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/codeLAlit/MembershipInferenceAttack_ML">Membership Inference Attack</a></h3>
-										<span>Machine Learning</span>
-										I with my group members implemented a research paper on Membership Inference Attack on Machine Learning service APIs.
-									</div>
-								</div>
-							</div>
-						</div>				
-						<div class="col-md-6 " >
-							<div class="project" style="background-image: url(images/color_cppn.png);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/codeLAlit/Super-Resolution-Images">Super-Resolution-Images</a></h3>
-										<span>Deep Learning | Computer Vision</span>
-										I attempt to create high resolution MNIST images using Lower resolution images. Read more about it
-										from the README of the directory.
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 " >
-							<div class="project" style="background-image: url(images/fas.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/codeLAlit/FAS"></a>Face Based Attendence System</a></h3>
-										<span>Image Processing | Computer Vision</span>
-										I created a web based platform to store employee facial features and use them to detect the presence
-										of one in an office. It is very basic tool but can be integrated with other system to get most out of it.
-									</div>
-								</div>
-							</div>
-						</div>	
-
-						<div class="col-md-6 " >
-							<div class="project" style="background-image: url(images/mlgym.png);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://github.com/codeLAlit/MLGYM">ML Gym</a></h3>
-										<span>Machine Learning</span>
-										I started a open source project and mentored few of my juniors in summer-20 to complete it. The project aims at providing 
-										user interface to play with ML algorithms and see the results changing. The APIs available in the market do not allow users to pla with the parameters
-										, we aim at making complete user controlled gui based platform to work on data.
-									</div>
-								</div>
-							</div>
-						</div>	
-				</div>
-			</section>
-
-			<section class="colorlib-blog" data-section="blog" id="blog">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 " >
-							<span class="heading-meta">Read</span>
-							<h2 class="colorlib-heading">Recent Blog</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 col-sm-6 ">
-							<div class="blog-entry">
-								<a href="blogs/blog_ctf_tools.html" class="blog-img"><img src="images/CTF_1.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<span><small>23 June 2020</small> | <small> CTF </small> | <small> <i class="icon-bubble3"></i> 0</small></span>
-									<h3><a href="bolgs/blog_ctf_tools.html">CTF TOOLS</a></h3>
-									<p>Here are some tools that are required during a ctf.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 " >
-							<div class="blog-entry">
-								<a href="https://github.com/codeLAlit/CsecCTF20_writeups" class="blog-img"><img src="images/csec.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<span><small>27 June 2020</small> | <small> CTF </small> | <small> <i class="icon-bubble3"></i> 0</small></span>
-									<h3><a href="https://github.com/codeLAlit/CsecCTF20_writeups">CSEC CTF20 Writeups </a></h3>
-									<p>Here are writeups for CTF conducted by CSEC club IITB, where our team secured 2nd position. 
-										Special thanks to <a href="http://www.cse.iitb.ac.in/~atulyakv" target="_blank">Atulya Kumar Verma</a>, <a href="http://www.cse.iitb.ac.in/~sahiljain" target="_blank">Sahil Jain</a> and <a href="http://www.cse.iitb.ac.in/~sauravgarg" target="_blank">Saurav Garg</a></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 " >
-							<div class="blog-entry">
-								<a href="blog.html" class="blog-img"><img src="images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<span><small>Date</small> | <small> Inspiration </small> | <small> <i class="icon-bubble3"></i> 0</small></span>
-									<h3><a href="blog.html">Coming soon</a></h3>
-									<p>Really Soon</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="colorlib-contact" data-section="contact" id="contact">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3" >
-							<span class="heading-meta">Get in Touch</span>
-							<h2 class="colorlib-heading">Contact</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="colorlib-feature colorlib-feature-sm " >
-								<div class="colorlib-icon">
-									<i class="icon-mail"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="mailto:lalitpsaini@gmail.com" style="font-size: medium;">lalitpsaini@gmail.com</a></p>
-								</div>
-							</div>					
-
-						</div>
-					</div>
-				</div>
-			</section>
-
-		</div><!-- end:colorlib-main -->
-	</div><!-- end:container-wrap -->
-	</div><!-- end:colorlib-page -->
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
-	
-	
-	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
-
-	</body>
+</body>
 </html>
-

@@ -1,171 +1,273 @@
-<html>
-    <head>
-        <title>CTF-TOOLS</title>
-        <link rel="stylesheet" href="blogs.css">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
-            <!-- Brand -->
-            <a class="navbar-brand" href="../index.html">Lalit Saini</a>
-          
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html#blog">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html#work">Work</a>
-                </li>
-              </ul>
-            </div>
-          </nav> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTF Tools — Lalit Saini</title>
+  <meta name="description" content="Essential tools for Capture The Flag competitions.">
 
-        <div class="container" id="blog-container">
-        <h1 style="text-align:center">CTF TOOLS</h1>
-        <hr>
-        <p>Here are some tools that can be helpful in a ctf event. It is possible that you may not get your answer from the following
-            tools. Keep looking, keep hacking. </p>
-        <h2> Images:</h2>
-        <table class="table table-striped" style="text-align:center">
-            <thead>
-                <tr>
-                <th scope="col" style="text-align:center">Tool</th>
-                <th scope="col" style="text-align:center">Application</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                <td style="text-align:center"><a href="http://www.libpng.org/pub/png/apps/pngcheck.html">pngcheck</a></td>
-                <td>Checking errors in png file</td>
-                </tr>
-                <tr>
-                <td style="text-align:center"><a href="https://github.com/sherlly/PCRT">PCRT</a></td>
-                <td>Python 2 based module to correct png files</td>
-                </tr>
-                <tr>
-                <td style="text-align:center"><a href="https://github.com/zed-0xff/zsteg">Zsteg</a></td>
-                <td>Ruby based tool for steganography</td>
-                </tr>
-                <tr>
-                <td style="text-align:center"><a href="http://entropymine.com/jason/tweakpng/">tweakPNG</a></td>
-                <td>Application to correct, check and edit png</td>
-                </tr>
-                <tr>
-                <td style="text-align:center"><a href="https://29a.ch/photo-forensics/">Forensically Beta</a></td>
-                <td>Online tool for steganography, use it for magnification tool, geotags and string extraction </td>
-                </tr>
-                <tr>
-                <td style="text-shadow:center;"><a href="https://github.com/zardus/ctf-tools/blob/master/stegsolve/install">StegSolver</a></td>
-                <td>Steganography solver.</td>
-                </tr>
-                </tbody>
-        </table>
-        <h2 >Hashing &amp; Encodings:</h2>
-        <table class="table table-striped">
-                <thead>
-                <tr>
-                <th scope="col" style="text-align:center">Algorithm</th>
-                <th scope="col" style="text-align:center">Link</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                <td style="text-align:center">Sha1</td>
-                <td style="text-align:center"><a href="https://md5decrypt.net/en/Sha1/">link</a></td>
-                </tr>
-                <tr>
-                <td style="text-align:center">Sha256</td>
-                <td style="text-align:center"><a href="https://md5decrypt.net/en/Sha256/">link</a></td>
-                </tr>
-                <tr>
-                <td style="text-align:center">md5</td>
-                <td style="text-align:center"><a href="https://www.md5online.org/md5-decrypt.html">link1</a> <br> <a href="https://md5decrypt.net/en/">link2</a></td>
-                </tr>
-                <tr>
-                <td style="text-align:center">All</td>
-                <td style="text-align:center"><a href="https://www.dcode.fr/hash-function">link</a> <br> This can tell the type of hashing too.</td>
-                </tr>
-                <tr>
-                <td style="text-align:center">ASCII85 and other weirdos</td>
-                <td style="text-align:center"><a href="https://cryptii.com/pipes/ascii85-encoding">link</a></td>
-                </tr>
-                <tr>
-                <td style="text-align:center">Conversions</td>
-                <td style="text-align:center"><a href="https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html">Rapid Tables</a></td>
-                </tr>
-                </tbody>
-        </table>
-        <h2>Password crackers:</h2>
-        <table class="table table-striped">
-          <thead>
-          <tr>
-          <th scope="col" style="text-align:center">Algorithm</th>
-          <th scope="col" style="text-align:center">Link</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-          <td style="text-align:center"><a href="https://github.com/magnumripper/JohnTheRipper">John The Ripper</a></td>
-          <td style="text-align:center"> Its primary purpose is to detect weak Unix passwords.</td>
-          </tr>
-          <tr>
-          <td style="text-align:center"><a href="https://github.com/hyc/fcrackzip">FcrackZip</a></td>
-          <td style="text-align:center">Fast password cracker that even performs Brute force attack</td>
-          </tr>
-          </tbody>
-        </table>
-        <h2>QR Readers:</h2>
-        <p>QR readers use different algorithms to decode choose which algorithm and corresponding tool you need.</p>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                <th scope="col" style="text-align:center">Links</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                <td style="text-align:center"><a href="https://www.imgonline.com.ua/eng/scan-qr-bar-code.php">QR Reader 1</a></td>
-                </tr>
-                <tr>
-                <td style="text-align:center"><a href="https://onlinebarcodereader.com/">QR Reader 2</a></td>
-                </tr>
-                </tbody>
-        </table>
-        <h2>Misc:</h2>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                <th scope="col" style="text-align:center">Tool</th>
-                <th scope="col" style="text-align:center">Application</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                <td style="text-align:center"><a href="https://www.wireshark.org/">wireshark</a></td>
-                <td style="text-align:center">Analysing data packets over internet</td>
-                </tr>
-                <tr>
-                <td style="text-align:center"><a href="https://www.wireshark.org/">MTP</a></td>
-                <td style="text-align:center">Keys in One-time pad encryption (OTP) should only be used once, when they get reused we can do a Many-time pad attack. <br> 
-                    MTP Interactive uses automated cryptanalysis to present a partial decryption which can be solved interactively.</td>
-                </tr>
-                </tbody>
-        </table>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    body {
+      padding-top: 80px;
+      background: #0a0a0a;
+      color: #e5e7eb;
+    }
+
+    .blog-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .blog-container h1 {
+      margin-bottom: 8px;
+    }
+
+    .blog-container .subtitle {
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin-bottom: 40px;
+    }
+
+    .blog-container h2 {
+      font-size: 1.3rem;
+      color: #00d4ff;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 48px 0 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .blog-container h2::before {
+      content: '# ';
+      color: #6b7280;
+    }
+
+    .blog-container p {
+      color: #9ca3af;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .blog-container a {
+      color: #00d4ff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .blog-container a:hover {
+      color: #66e5ff;
+    }
+
+    .ctf-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #111827;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .ctf-table thead {
+      background: rgba(0,212,255,0.08);
+    }
+
+    .ctf-table th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #00d4ff;
+      padding: 16px 20px;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    .ctf-table td {
+      padding: 14px 20px;
+      border-top: 1px solid rgba(255,255,255,0.04);
+      color: #d1d5db;
+      font-size: 0.9rem;
+    }
+
+    .ctf-table tr:hover td {
+      background: rgba(0,212,255,0.03);
+    }
+
+    .ctf-table td:first-child,
+    .ctf-table th:first-child {
+      width: 35%;
+    }
+
+    .ctf-table .tool-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .blog-container h1 { font-size: 1.6rem; }
+      .ctf-table { font-size: 0.8rem; }
+      .ctf-table th,
+      .ctf-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">&lt;Lalit /&gt;</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#timeline">Timeline</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#blog">Blog</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
     </div>
-    </body>
+  </nav>
+
+  <main class="blog-container">
+    <h1>CTF Tools</h1>
+    <p class="subtitle">Essential tools for Capture The Flag competitions</p>
+
+    <p>Here are some tools that can be helpful in a CTF event. It is possible that you may not get your answer from the following tools. Keep looking, keep hacking.</p>
+
+    <h2>Images</h2>
+    <table class="ctf-table">
+      <thead>
+        <tr><th>Tool</th><th>Application</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tool-link"><a href="http://www.libpng.org/pub/png/apps/pngcheck.html" target="_blank">pngcheck</a></td>
+          <td>Checking errors in PNG files</td>
+        </tr>
+        <tr>
+          <td class="tool-link"><a href="https://github.com/sherlly/PCRT" target="_blank">PCRT</a></td>
+          <td>Python 2 based module to correct PNG files</td>
+        </tr>
+        <tr>
+          <td class="tool-link"><a href="https://github.com/zed-0xff/zsteg" target="_blank">Zsteg</a></td>
+          <td>Ruby based tool for steganography</td>
+        </tr>
+        <tr>
+          <td class="tool-link"><a href="http://entropymine.com/jason/tweakpng/" target="_blank">tweakPNG</a></td>
+          <td>Application to correct, check and edit PNG</td>
+        </tr>
+        <tr>
+          <td class="tool-link"><a href="https://29a.ch/photo-forensics/" target="_blank">Forensically Beta</a></td>
+          <td>Online tool for steganography — magnification, geotags, string extraction</td>
+        </tr>
+        <tr>
+          <td class="tool-link"><a href="https://github.com/zardus/ctf-tools/blob/master/stegsolve/install" target="_blank">StegSolver</a></td>
+          <td>Steganography solver</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Hashing &amp; Encodings</h2>
+    <table class="ctf-table">
+      <thead>
+        <tr><th>Algorithm</th><th>Link</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tool-link">SHA-1</td>
+          <td><a href="https://md5decrypt.net/en/Sha1/" target="_blank">md5decrypt.net</a></td>
+        </tr>
+        <tr>
+          <td class="tool-link">SHA-256</td>
+          <td><a href="https://md5decrypt.net/en/Sha256/" target="_blank">md5decrypt.net</a></td>
+        </tr>
+        <tr>
+          <td class="tool-link">MD5</td>
+          <td><a href="https://www.md5online.org/md5-decrypt.html" target="_blank">MD5Online</a> &middot; <a href="https://md5decrypt.net/en/" target="_blank">md5decrypt.net</a></td>
+        </tr>
+        <tr>
+          <td class="tool-link">All</td>
+          <td><a href="https://www.dcode.fr/hash-function" target="_blank">dCode.fr</a> — can identify the hash type too</td>
+        </tr>
+        <tr>
+          <td class="tool-link">ASCII85 &amp; others</td>
+          <td><a href="https://cryptii.com/pipes/ascii85-encoding" target="_blank">cryptii.com</a></td>
+        </tr>
+        <tr>
+          <td class="tool-link">Conversions</td>
+          <td><a href="https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html" target="_blank">Rapid Tables</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Password Crackers</h2>
+    <table class="ctf-table">
+      <thead>
+        <tr><th>Tool</th><th>Application</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tool-link"><a href="https://github.com/magnumripper/JohnTheRipper" target="_blank">John The Ripper</a></td>
+          <td>Detect weak Unix passwords</td>
+        </tr>
+        <tr>
+          <td class="tool-link"><a href="https://github.com/hyc/fcrackzip" target="_blank">FcrackZip</a></td>
+          <td>Fast ZIP password cracker with brute force support</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>QR Readers</h2>
+    <p>Different QR readers use different algorithms. Try both if one fails.</p>
+    <table class="ctf-table">
+      <thead>
+        <tr><th>Tool</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tool-link"><a href="https://www.imgonline.com.ua/eng/scan-qr-bar-code.php" target="_blank">imgonline QR Reader</a></td>
+        </tr>
+        <tr>
+          <td class="tool-link"><a href="https://onlinebarcodereader.com/" target="_blank">Online Barcode Reader</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Misc</h2>
+    <table class="ctf-table">
+      <thead>
+        <tr><th>Tool</th><th>Application</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tool-link"><a href="https://www.wireshark.org/" target="_blank">Wireshark</a></td>
+          <td>Analyse network packets</td>
+        </tr>
+        <tr>
+          <td class="tool-link"><a href="https://github.com/CameronLonsdale/MTP" target="_blank">MTP</a></td>
+          <td>Many-Time Pad attack — automated cryptanalysis for reused OTP keys</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('navbar').classList.toggle('nav--open');
+    });
+    document.querySelectorAll('.nav__links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('navbar').classList.remove('nav--open');
+      });
+    });
+  </script>
+</body>
 </html>

@@ -1,0 +1,11 @@
+{
+  "name": "lalit-saini",
+  "private": true,
+  "scripts": {
+    "build-css": "sass sass/style.scss css/style.css --style compressed",
+    "watch-css": "sass --watch sass/style.scss:css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
